@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Crafty+Girls&family=PT+Sans&display=swap');
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: normal;
+  }
+
+  body{
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to left,  rgb(179, 170, 47), rgb(14, 80, 73));
+  }
+
+  .calculator-grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    border-radius: 80px;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px); 
+  }
+
+  .calculator-grid > button {
+      cursor: pointer;
+      font-size: 25px;
+      border: 2px solid #312626;
+  }
+
+  .calculator-grid > button:hover {
+    background-color: #ce8613;
+  }
+
+  .span-two {
+    grid-column: span 2;
+    color: #f1f1f1;
+    background-color: rgba(140, 180, 192, 0.918);
+  }
+
+  .output{
+    grid-column: 1 / -1;
+    background-color: rgba(18, 16, 20, 0.87);
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    
+  }
+
+  .output .previous{
+    color: rgba(255, 255, 255, 0.979);
+    font-size: 1.5rem;
+  }
+
+  .output .current{
+    color: white;
+    font-size: 2.5rem;
+  }
